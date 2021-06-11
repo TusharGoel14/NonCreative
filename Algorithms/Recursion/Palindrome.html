@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="styleshhet" type="css/text" href="index.css">
+    <title>Palindrome</title>
+</head>
+<body style="background: rgba(231, 231, 231, 0.9)">
+
+    <div style="color: firebrick; margin: 5px;">&lt;&lt;&lt;<a href="../Recursion.html" style="color: firebrick;">Recursion</a></div>
+
+    <h3 style="margin-left: 5%; padding-top: 2%; color:darkred;">Palindrome</h3>
+
+    <div style="padding-top:20px;">
+        <pre>
+            <code>
+                import java.util.*;
+                class main{   
+                    public static void main(String[] args){
+                       <span style="color: crimson;">//palindrome with the help of recursion</span> 
+                       int n=23432;
+                       int p=rev(n,0);
+                       System.out.println(p);
+                       if(n==p)
+                       System.out.print("palindrome");
+                       else
+                       System.out.println("not palindrome");
+                    }
+                    static int rev(int n, int p){
+                        <span style="color: crimson;">//Base case</span>
+                        if(n==0)
+                        return p;
+                        <span style="color: crimson;">//recursive case</span>
+                        p=rev(n/10,p*10+n%10);
+                        <span style="color: crimson;">//n=234 === 23 === 2==0
+                        //p=0*10+4==4*10+3=43*10+2=432</span>
+                        return p;
+                    }             
+                }
+            </code></pre>
+    </div>
+</body>
+</html>

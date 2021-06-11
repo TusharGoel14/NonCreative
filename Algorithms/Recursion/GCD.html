@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="styleshhet" type="css/text" href="index.css">
+    <title>GCD</title>
+</head>
+<body style="background: rgba(231, 231, 231, 0.9)">
+
+    <div style="color: firebrick; margin: 5px;">&lt;&lt;&lt;<a href="../Recursion.html" style="color: firebrick;">Recursion</a></div>
+
+    <h3 style="margin-left: 5%; padding-top: 2%; color:darkred;">GCD(Greatest Common Divisor)</h3>
+
+    <div style="padding-top:20px;">
+        <pre>
+            <code>
+                import java.util.*;
+                class main{   
+                    public static void main(String[] args){
+                       int ans=gcd(4,6);
+                       System.out.println(ans);
+                    }
+                    
+                    static int gcd(int divident, int divisor){
+                        <span style="color: darkred;">// Base Case</span>
+                        if(divisor==0)
+                        return divident;
+                        <span style="color: darkred;">// Recursive Case</span>
+                        else
+                        return gcd(divisor,divident%divisor);
+                    }
+                
+                }
+            </code></pre>
+    </div>
+</body>
+</html>
